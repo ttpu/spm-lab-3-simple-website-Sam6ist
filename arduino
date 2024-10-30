@@ -1,0 +1,5 @@
+protsessor_simulyatori/
+│
+├── app.py
+└── static/
+    └── style.css

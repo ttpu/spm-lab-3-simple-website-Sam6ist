@@ -1,13 +1,21 @@
-<!-- templates/index.html -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uz">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Bosh sahifa</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Protsessor Simulyatori</title>
 </head>
 <body>
-    <h1>Bosh sahifaga xush kelibsiz!</h1>
-    <a href="/content"><button>Kontent sahifasiga o'tish</button></a>
+    <h1>Protsessor Simulyatori</h1>
+    <form action="/calculate" method="POST">
+        <input type="number" name="a" placeholder="Birinchi raqam" required>
+        <input type="number" name="b" placeholder="Ikkinchi raqam" required>
+        <select name="operation">
+            <option value="add">Qo'shish</option>
+            <option value="subtract">Ayirish</option>
+        </select>
+        <button type="submit">Hisoblash</button>
+    </form>
 </body>
 </html>
